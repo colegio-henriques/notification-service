@@ -47,3 +47,7 @@ jobs:
           region: ${{ env.REGION }}
           image: europe-west1-docker.pkg.dev/${{ env.PROJECT_ID }}/ch-registry/${{ env.SERVICE_NAME }}:${{ github.sha }}
           flags: '--allow-unauthenticated'
+          env_vars: |
+            PUBSUB_TOPIC=aluno.matriculado
+            SMTP_HOST=smtp.gmail.com
+            SMTP_USER=test@colegiohenriques.com
